@@ -60,7 +60,10 @@ function deleteListItem(e){
 }
 
 removeButton.onclick= async () => {
-    
+    if(localStorage.length === 0){
+        showToast('red', 'Boş liste silinemez. Lütfen item ekleyiniz.')
+        return
+    } 
     localStorage.clear();
       while (listDOM.firstChild) {
           listDOM.removeChild(listDOM   .firstChild); 
