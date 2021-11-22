@@ -69,6 +69,7 @@ removeButton.onclick= async () => {
           listDOM.removeChild(listDOM   .firstChild); 
       }
     showToast('red', 'Tüm itemler silindi');  
+    itemsArray = []
 }
  
 
